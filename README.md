@@ -1,4 +1,5 @@
 # Devops's project during the 4th engineering 
+By Arnaud Jullemier-Millasseau and Lilian Delaplace TD03 (inter)
 # Table of contents
 1. [Introduction](#introduction)
 2. [The project](#theproject)
@@ -7,8 +8,8 @@
     3. [Licence](#licence)
     4. [Label](#label)
     5. [Who did what ?](#who)
-       1.[Team]
-       2.[Task]
+       1.[Team](#team)
+       2.[Task](#task)
 3. [How to launch it](#nasa)
 
 ## This is the introduction <a name="introduction"></a>
