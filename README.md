@@ -1,5 +1,16 @@
+![alt text](https://img.shields.io/github/license/taurus-silver-17/Devops-ing4)
+![alt text](https://img.shields.io/badge/Python-3.6-green "Logo Title Text 1")
+![alt text](https://img.shields.io/badge/Docker%20Build-Passing-green)
+![alt text](https://img.shields.io/badge/Docker%20Build%20-Automated-blue)
+![alt text](https://img.shields.io/badge/Build-failure-red)
+![alt text](https://img.shields.io/github/forks/taurus-silver-17/Devops-ing4)
+![alt text](https://img.shields.io/github/repo-size/Taurus-silver-17/Devops-ing4)
+
 # Devops's project during the 4th engineering 
 By Arnaud Jullemier-Millasseau and Lilian Delaplace TD03 (inter)
+
+
+
 # Table of contents
 1. [Introduction](#introduction)
 2. [The project](#theproject)
