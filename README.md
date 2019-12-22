@@ -1,24 +1,36 @@
-# Devops-ing4
+# Devops's project during the 4th engineering 
 # Table of contents
 1. [Introduction](#introduction)
 2. [The project](#theproject)
-    1. [Docker](#subparagraph1)
-    2. [Test]
-    3. [Licence]
-    4. [Label]
-    5. [Who did what ?]
+    1. [Docker](#docker)
+    2. [Test](#test)
+    3. [Licence](#licence)
+    4. [Label](#label)
+    5. [Who did what ?](#who)
        1.[Team]
-       5.[Task]
-3. [How to launch it](#paragraph2)
+       2.[Task]
+3. [How to launch it](#nasa)
 
 ## This is the introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
 
-## Some paragraph <a name="theproject"></a>
+## The project <a name="theproject"></a>
 The first paragraph text
 
-### Sub paragraph <a name="subparagraph1"></a>
+### Docker <a name="docker"></a>
 This is a sub paragraph, formatted in heading 3 style
 
-## Another paragraph <a name="paragraph2"></a>
+## Some testing <a name="test"></a>
+The second paragraph text
+
+## The Licence <a name="licence"></a>
+The second paragraph text
+
+## Label <a name="label"></a>
+The second paragraph text
+
+## Who did what ? <a name="who"></a>
+The second paragraph text
+
+## How to launch it <a name="nasa"></a>
 The second paragraph text
