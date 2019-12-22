@@ -14,8 +14,8 @@ POSTGRES = {
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:%(pass)s@%(host)s:%(port)s/%(db)s' % POSTGRES
 db.init_app(app)
 ## Init GPIO pins
-from gpiozero import LEDBoard
-leds = LEDBoard(4, 17, 27, 22, 26, 19, 13, 6)
+#from gpiozero import LEDBoard
+#leds = LEDBoard(4, 17, 27, 22, 26, 19, 13, 6)
 #leds = {}
 #gpios = db.session.query(Rooms.gpio).all()
 #if gpios == []:
@@ -43,7 +43,7 @@ def ctrl_lights(room):
 	else:
 		for r in rooms:
 			if r.toList()[0] == room:
-				leds[r.toList[2]].toggle()
+				#leds[r.toList[2]].toggle()
 				flash("Light turned on/off")
 				return redirect("/truhome")
 			else:
@@ -62,7 +62,7 @@ def toTemplates():
 			Eg. In the template, get_st(kitchen) will return 0 or 1.
 		"""
 		gpios = db.session.query(Rooms.gpio).filter(Rooms.name == room).scalar()
-		status = leds[gpios].value
+		#status = leds[gpios].value
 		if status == 0:
 			return 0
 		else:
