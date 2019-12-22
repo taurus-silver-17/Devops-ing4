@@ -5,10 +5,10 @@ app.secret_key = b'BASE64HASH'
 ## Init DB
 from models import db,Rooms
 POSTGRES = {
-	'user' : 'DBUSER',
-	'pass' : 'DBPASS',
+	'user' : 'user',
+	'pass' : 'pass123',
 	'db' : 'DBNAME',
-	'host' : 'localhost',
+	'host' : 'devops-db',
 	'port' : '5432',
 }
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:%(pass)s@%(host)s:%(port)s/%(db)s' % POSTGRES
