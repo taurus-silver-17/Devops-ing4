@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TheRedUnicorn Home</title>
+	<link rel="stylesheet" href="https://dev.the-redunicorn.fr/css/truhome/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://dev.the-redunicorn.fr/css/truhome/jumbotron-narrow.css" />
+	<link rel="stylesheet" href="https://dev.the-redunicorn.fr/css/truhome/ie10-viewport-bug-workaround.css" />
+	<link rel="shortcut icon" type="image/svg+xml" href="https://the-redunicorn.fr/logo-tru.svg" />
+</head>
+
+<body>
+ 
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a>
+                    </li>
+                    <li role="presentation"><a href="#">Sign In</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">TheRedUnicorn Home</h3>
+        </div>
+ 
+        <div class="jumbotron">
+            <h1>Your Smart Home <i>by TheRedUnicorn</i></h1>
+            <p class="lead"></p>
+            <p><a class="btn btn-lg btn-success" href="https://wiki.the-redunicorn.fr/index.php?title=Service:Home" role="button">See more</a>
+            </p>
+        </div>
+ 
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Powered by Flask and Python</h4>
+                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+ 
+                <h4>Embedded on a Raspberry Pi</h4>
+                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+            </div>
+ 
+            <div class="col-lg-6">
+                <h4>Hosted on TheRedUnicorn server</h4>
+                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+ 
+                <h4>Makes your home smarter</h4>
+                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+            </div>
+        </div>
+ 
+        <footer class="footer">
+            <p>TheRedUnicorn Home v0.1</p>
+        </footer>
+
+    </div>
+</body> 
+</html>

@@ -1,0 +1,48 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 0;
+    margin-top: 5px;
+    font-family: verdana, sans-serif;
+    border: groove 3px black;
+    border-radius: 5px;
+}
+
+h1
+{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 100px;
+}
+
+ul
+{
+    list-style: square;
+    margin-left: 50px;
+    line-height: 1.8em;
+}
+
+li
+{
+    font-size: 18px;
+}
+
+a:link, a:visited
+{
+    text-decoration: none;
+    color: forestgreen;
+}
+
+a:hover, a:active
+{
+    text-decoration: none;
+    color: darkgreen;
+}
