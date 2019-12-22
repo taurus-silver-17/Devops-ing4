@@ -14,7 +14,9 @@ By Arnaud Jullemier-Millasseau and Lilian Delaplace TD03 (inter)
 
 ## This is the introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
-
+```
+test
+```
 ## The project <a name="theproject"></a>
 The first paragraph text
 
