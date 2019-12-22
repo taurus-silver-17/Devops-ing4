@@ -3,11 +3,12 @@ from flask import Flask, render_template, flash, request, redirect, make_respons
 app = Flask(__name__)
 app.secret_key = b'BASE64HASH'
 ## Init DB
+import os
 from models import db,Rooms
 POSTGRES = {
-	'user' : 'user',
-	'pass' : 'pass123',
-	'db' : 'DBNAME',
+	'user' : os.environ['POSTGRES_USER'],
+	'pass' : os.environ['POSTGRES_PASSWORD'],
+	'db' : os.environ['POSTGRES_DB'],
 	'host' : 'devops-db',
 	'port' : '5432',
 }
