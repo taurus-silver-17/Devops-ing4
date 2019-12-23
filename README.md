@@ -6,7 +6,7 @@
 ![alt text](https://img.shields.io/github/forks/taurus-silver-17/Devops-ing4)
 ![alt text](https://img.shields.io/github/repo-size/Taurus-silver-17/Devops-ing4)
 
-# Devops's project during the 4th engineering 
+# DevOps project during the 4th engineering 
 By Arnaud Jullemier-Millasseau and Lilian Delaplace TD03 (inter)
 
 
@@ -94,10 +94,10 @@ On réutilise ce même avantage dans l'application en utilisant le nom du conten
 
 ## Some testing <a name="test"></a>
 UNDER CONSTRUCTION
-## The Licence <a name="licence"></a>
-Copyright (c) 2016-2019
 
+## The Licence <a name="licence"></a>
 Licensed GNU General Public License v3.0. [View license](https://github.com/taurus-silver-17/Devops-ing4/blob/master/LICENSE)
+
 ## Label <a name="label"></a>
 To create the badges like these : 
 ![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/Badges.png)
@@ -126,6 +126,8 @@ docker-compose build
 ```
 - CASE 2: to start the containers (with or without pre-existing build) 
 ```
-docker-compose up
+docker-compose up -d
 ```
+## Issues <a name="issues"></a>
+https://github.com/taurus-silver-17/Devops-ing4/issues/1
 
