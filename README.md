@@ -25,6 +25,7 @@ By Arnaud Jullemier-Millasseau and Lilian Delaplace TD03 (inter)
 4. [How to launch it](#nasa)
 
 ## This is the introduction <a name="introduction"></a>
+The purpose of this directory is to respond to an homework of Devops. The goal is to put into practice the right methodology for a Devops project.
 
 ## Requirements for this project <a name="assignements"></a>
  As a reminder, here are the notation criteria for the DEVOPS project:
@@ -35,11 +36,15 @@ By Arnaud Jullemier-Millasseau and Lilian Delaplace TD03 (inter)
 - Provide a "README" file explaining how to launch your project, how to launch the tests, what problems your had
 
 ## The project <a name="theproject"></a>
-The first paragraph text
+We started from a project that Arnaud had already realized with a former colleague, this project is described and accessible in "the release v1.0". 
+
+The goal of the project is to manage lights via a raspberry pi, we realized the same principle almost but this time with containers. We remind nevertheless that if the code doesn't work, the goal of this project is not a computer project but a Devops project. 
+
+
 
 ## Docker <a name="docker"></a>
 This is a sub paragraph, formatted in heading 3 style
-
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/schema_docker.png)
 ## Some testing <a name="test"></a>
 The second paragraph text
 
