@@ -105,7 +105,10 @@ The second paragraph text
 The second paragraph text
 
 ## Team  <a name="team"></a>
-The second paragraph text
+We are a team of two :
+- [Lilian Delaplace (Techorem)](https://github.com/techorem)
+- [Arnaud Jullemier (Taurus-silver-17)](https://github.com/taurus-silver-17)
+
 
 ## Tasks ? <a name="task"></a>
 The second paragraph text
