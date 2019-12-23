@@ -44,51 +44,52 @@ The goal of the project is to manage lights via a raspberry pi, we realized the 
 
 
 ## Docker <a name="docker"></a>
-  il y a actuellement 3 conteneurs qui tournent : :
-- devops-db qui est un conteneur postgre
-- devops-ci qui est le cotneneur sonarqube
-- Le conteneur devops-main qui contient l'application python et qui est une base du coteneur nginx Qui sont déployés via         docker-compose lorsqu'on se connecte à l'adresse : "http://163.172.64.25:8080/truhome/"
+  There are currently 3 containers turning: :
+- "devops-db" which is a "postgre" container. 
+- "devops-ci," which is the "sonarqube" container.
+- The devops-main container which contains the python application and is a base for the nginx container which are deployed via docker-composes when you connect to "http://163.172.64.25:8080/truhome/".
   
 ![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/schema_docker.png)
 
-  Ici on 4 fichiers : 
+  Here we have 4 files: 
 
-- docker-compose.yml : ici on déclare nos 3 services : 
-1. devops-db qui sera le premier conteneur pour la bdd, on lui donne un nom pour le DNS : devops-db. 
+- docker-compose.yml : here we declare our 3 services: 
+1. devops-db which will be the first container for the db, we give it a name for the DNS : devops-db. 
 
-On donne ensuite des variables d'environnment pour la création de la bdd postgres
+Then we give environment variables for the creation of the postgres database.
 
-2. devops-ci qui est le 2ème conteneur, pour le serveur CI 
-- devops-main : ici on ne précise pas d'image, puisqu'on va partir d'un docker file comme nous allons créer notre image à       partir de nos fichiers. 
+2. devops-ci which is the 2nd container, for the CI server 
+- devops-main: here we don't specify an image, since we will start from a docker file as we will create our image from our files. 
 
-On retrouve nos variables d'environnments puisque ce sont des paramètres qui serviront dans nos fichiers de configuration 
+We find our environment variables since they are parameters that will be used in our configuration files. 
+
 
 ![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/imag1.png)
 
-Donc nous pouvons ci-dessus, les variables d'environnments définis à la création du conteneur que l'on récupère dans l'application.
+So we can see above, the environment variables defined at the creation of the container that we retrieve in the application.
 
-Ensuite on définit le paramètre port qui permet la redirection du port 80 pour notre conteneur vers le port 8080 de la machine hôte. On déclare des dépendances, qui vont nous permettre de dire que si les conteneurs indiqués ne sont pas correctents démarrés, on arrête le build du conteneur en question. 
+Then we define the port parameter which allows the redirection from port 80 for our container to port 8080 of the host machine. We declare dependencies, which will allow us to say that if the specified Containers are not correctly started, we stop the build of the Container in question. 
 
-On a un paramètre build qui nous permet d'indiquer le chemin vers le docker file. Maintenant parlons du docker file : il permet de créer l'image du conteneur devops-main. On part d'un conteneur NGINX, on copie les fichiers dont on aura besoin plus tard (fichier de configuration et fichier entry-point). 
-On exécute ensuite une série de commandes permettant la préparation et l'installation de nos dépendances logiciels. Après nous allons colner le projet Github à la racine du serveur web. 
+We have a build parameter that allows us to indicate the path to the docker file. Now let's talk about the docker file: it allows us to create the image of the devops-main container. We start from a NGINX container, we copy the files we'll need later (configuration file and entry-point file). 
+We then execute a series of commands to prepare and install our software dependencies. Then we will paste the Github project to the root of the web server. 
 
-Enfin nous éxécutons l'entry-point via la directive unique "CMD" ce qui nous renvoie à "l'entry point". L'entry point est le point d'entrée du conteneur c'est à dire : une ou plusieurs commandes à exécuter, une fois le contenueur créé sur la base de l'image construite, selon le docker file. 
+Finally, we execute the entry point via the single directive "CMD" which refers us to the "entry point". The entry point is the entry point of the container, i.e.: one or more commands to execute, once the container is created based on the constructed image, depending on the docker file. 
 
-Une fois qu'on dispose de tout ca on exécute : docker-compose build afin de construire l'architecture et les images selon la description fournit dans le fichier : docker-compose.yml
+Once we have all this we execute: "docker-compose build" in order to build the architecture and the images according to the description provided in the file: docker-compose.yml
 
-Enfin pour instancier les conteneurs, on exécute docker-compose up -d Les conteneurs seront détachés en tâche de fond : 
+Finally, to instantiate the containers, we run "docker-compose-up -d". The containers will be detached in the background: 
 
 ![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/img2.jpeg)
 
-Ici nous pouvons le résultat de build : différentes images ont été téléchargé ou créé comme par exemple : postgres, sonarqube ou nginx que l'on retrouve dans docker-compose.yml et docker file ou encore devops_devops-main qui est l'image résultant du docker file et correspodant à notre application principale.
+Here we can see the result of build: different images have been downloaded or created as for example: postgres, sonarqube or nginx which can be found in docker-compose.yml and docker file or devops_devops-main which is the image resulting from the docker file and corresponding to our main application.
 
-Le dernier fichier créé que l'on copie comme mentionné ds le docker file qui est "app.conf" 
+The last created file that we copy as mentioned in the docker file which is "app.conf". 
 
 ![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/app_conf.png)
 
-Il s'agit de configuration nginx, permettant d'accéder à l'application python/flask, depuis le port 80 du conteneur. Il est intéressant de noter que l'on peut utiliser comme directive "server_name" le nom du conteneur tel que définit dans le docker-compose.yml, à la place de son adresse IP. Qui elle n'est pas connu à l'avance et qui change d'un build à un autre et d'une machine à une autre.
+This is nginx configuration, allowing access to the python/flask application from port 80 of the container. It is interesting to note that you can use as a "server_name" directive the name of the container as defined in the docker-compose.yml, instead of its IP address. Which it is not known in advance and which changes from one build to another and from one machine to another.
 
-On réutilise ce même avantage dans l'application en utilisant le nom du conteneur de bdd comme "hostname" 
+We reuse this same advantage in the application by using the name of the bdd container as "hostname". 
 
 ![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/ig.png)
 
