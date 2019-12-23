@@ -111,7 +111,10 @@ We are a team of two :
 
 
 ## Tasks ? <a name="task"></a>
-The second paragraph text
+Here you will found our organization for this project 
+
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/tasks.png)
+
 
 ## How to launch it <a name="nasa"></a>
 On se positione dans le répertoire docker : 
