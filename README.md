@@ -117,12 +117,12 @@ Here you will found our organization for this project
 
 
 ## How to launch it <a name="nasa"></a>
-On se positione dans le répertoire docker : 
-- CAS 1 : construire uniquement le projet : 
+We position ourselves in the docker directory : 
+- CASE 1: build only the project: 
 ```
 docker-compose build
 ```
-- CAS 2 : pour démarrer les conteneurs (avec ou sans build préexistant) 
+- CASE 2: to start the containers (with or without pre-existing build) 
 ```
 docker-compose up
 ```
