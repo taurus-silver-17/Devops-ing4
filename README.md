@@ -111,8 +111,12 @@ The second paragraph text
 The second paragraph text
 
 ## How to launch it <a name="nasa"></a>
-On se positione dans le répertoire docker : CAS 1 : construire uniquement le projet : docker-compose build CAS 2 : pour démarrer les conteneurs (avec ou sans build préexistant) docker-compose up
-The second paragraph text
+On se positione dans le répertoire docker : 
+- CAS 1 : construire uniquement le projet : 
 ```
-test
+docker-compose build
+```
+- CAS 2 : pour démarrer les conteneurs (avec ou sans build préexistant) 
+```
+docker-compose up
 ```
