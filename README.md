@@ -84,7 +84,7 @@ Ici nous pouvons le résultat de build : différentes images ont été télécha
 
 Le dernier fichier créé que l'on copie comme mentionné ds le docker file qui est "app.conf" 
 
-"image3"
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/app_conf.png)
 
 Il s'agit de configuration nginx, permettant d'accéder à l'application python/flask, depuis le port 80 du conteneur. Il est intéressant de noter que l'on peut utiliser comme directive "server_name" le nom du conteneur tel que définit dans le docker-compose.yml, à la place de son adresse IP. Qui elle n'est pas connu à l'avance et qui change d'un build à un autre et d'une machine à une autre.
 
