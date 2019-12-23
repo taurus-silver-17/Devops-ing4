@@ -26,6 +26,7 @@ By Arnaud Jullemier-Millasseau and Lilian Delaplace TD03 (inter)
 
 ## This is the introduction <a name="introduction"></a>
 The purpose of this directory is to respond to an homework of Devops. The goal is to put into practice the right methodology for a Devops project.
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/devops.png)
 
 ## Requirements for this project <a name="assignements"></a>
  As a reminder, here are the notation criteria for the DEVOPS project:
