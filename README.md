@@ -113,7 +113,7 @@ We are a team of two :
 ## Tasks ? <a name="task"></a>
 Here you will found our organization for this project 
 
-![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/tasks.png)
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/task10.png)
 
 
 ## How to launch it <a name="nasa"></a>
