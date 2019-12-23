@@ -47,7 +47,7 @@ The goal of the project is to manage lights via a raspberry pi, we realized the 
   il y a actuellement 3 conteneurs qui tournent : :
 - devops-db qui est un conteneur postgre
 - devops-ci qui est le cotneneur sonarqube
-- Le conteneur devops-main qui contient l'application python et qui est une base du coteneur nginx Qui sont déployés via         docker-compose lorsqu'on se connecte à l'adresse : "http://163.172.64.25:8080"
+- Le conteneur devops-main qui contient l'application python et qui est une base du coteneur nginx Qui sont déployés via         docker-compose lorsqu'on se connecte à l'adresse : "http://163.172.64.25:8080/truhome/"
   
 ![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/schema_docker.png)
 
@@ -63,7 +63,7 @@ On donne ensuite des variables d'environnment pour la création de la bdd postgr
 
 On retrouve nos variables d'environnments puisque ce sont des paramètres qui serviront dans nos fichiers de configuration 
 
-"mettre image1" 
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/imag1.png)
 
 Donc nous pouvons ci-dessus, les variables d'environnments définis à la création du conteneur que l'on récupère dans l'application.
 
@@ -78,7 +78,7 @@ Une fois qu'on dispose de tout ca on exécute : docker-compose build afin de con
 
 Enfin pour instancier les conteneurs, on exécute docker-compose up -d Les conteneurs seront détachés en tâche de fond : 
 
-"image 2 "
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/img2.jpeg)
 
 Ici nous pouvons le résultat de build : différentes images ont été téléchargé ou créé comme par exemple : postgres, sonarqube ou nginx que l'on retrouve dans docker-compose.yml et docker file ou encore devops_devops-main qui est l'image résultant du docker file et correspodant à notre application principale.
 
@@ -88,8 +88,9 @@ Le dernier fichier créé que l'on copie comme mentionné ds le docker file qui 
 
 Il s'agit de configuration nginx, permettant d'accéder à l'application python/flask, depuis le port 80 du conteneur. Il est intéressant de noter que l'on peut utiliser comme directive "server_name" le nom du conteneur tel que définit dans le docker-compose.yml, à la place de son adresse IP. Qui elle n'est pas connu à l'avance et qui change d'un build à un autre et d'une machine à une autre.
 
-On réutilise ce même avantage dans l'application en utilisant le nom du conteneur de bdd comme "hostname" "image4"
+On réutilise ce même avantage dans l'application en utilisant le nom du conteneur de bdd comme "hostname" 
 
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/ig.png)
 
 
 ## Some testing <a name="test"></a>
@@ -128,6 +129,8 @@ docker-compose build
 ```
 docker-compose up -d
 ```
+Then you go on "http://163.172.64.25:8080/truhome/"
+
 ## Issues <a name="issues"></a>
-https://github.com/taurus-silver-17/Devops-ing4/issues/1
+[Issue1](https://github.com/taurus-silver-17/Devops-ing4/issues/1)
 
