@@ -93,17 +93,19 @@ On réutilise ce même avantage dans l'application en utilisant le nom du conten
 
 
 ## Some testing <a name="test"></a>
-The second paragraph text
-
+UNDER CONSTRUCTION
 ## The Licence <a name="licence"></a>
-The second paragraph text
+Copyright (c) 2016-2019
 
+Licensed GNU General Public License v3.0. [View license](https://github.com/taurus-silver-17/Devops-ing4/blob/master/LICENSE)
 ## Label <a name="label"></a>
-The second paragraph text
+To create the badges like these : 
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/Badges.png)
+
+We used [shield.io](https://shields.io/)
 
 ## Who did what ? <a name="who"></a>
-The second paragraph text
-
+In this section you will find the consitution of our Team and the tasks
 ## Team  <a name="team"></a>
 We are a team of two :
 - [Lilian Delaplace (Techorem)](https://github.com/techorem)
