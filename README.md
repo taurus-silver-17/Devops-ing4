@@ -44,27 +44,31 @@ The goal of the project is to manage lights via a raspberry pi, we realized the 
 
 
 ## Docker <a name="docker"></a>
-
-il y a actuellement 3 conteneurs qui tournent : 
-
--devops-db qui est un conteneur postgre 
--devops-ci qui est le cotneneur sonarqube 
--Le conteneur devops-main qui contient l'application python et qui est une base du coteneur nginx Qui sont déployés via docker-compose lorsqu'on se connecte à l'adresse : "http://163.172.64.25:8080"
-
+  il y a actuellement 3 conteneurs qui tournent : :
+- devops-db qui est un conteneur postgre
+- devops-ci qui est le cotneneur sonarqube
+- Le conteneur devops-main qui contient l'application python et qui est une base du coteneur nginx Qui sont déployés via         docker-compose lorsqu'on se connecte à l'adresse : "http://163.172.64.25:8080"
+  
 ![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/schema_docker.png)
 
-Ici on 4 fichiers : 
+  Ici on 4 fichiers : 
 
--docker-compose.yml : ici on déclare nos 3 services : 
--devops-db qui sera le premier conteneur pour la bdd, on lui donne un nom pour le DNS : devops-db. 
+- docker-compose.yml : ici on déclare nos 3 services : 
+1. devops-db qui sera le premier conteneur pour la bdd, on lui donne un nom pour le DNS : devops-db. 
 
 On donne ensuite des variables d'environnment pour la création de la bdd postgres
 
--devops-ci qui est le 2ème conteneur, pour le serveur CI 
--devops-main : ici on ne précise pas d'image, puisqu'on va partir d'un docker file comme nous allons créer notre image à partir de nos fichiers. 
+2. devops-ci qui est le 2ème conteneur, pour le serveur CI 
+- devops-main : ici on ne précise pas d'image, puisqu'on va partir d'un docker file comme nous allons créer notre image à       partir de nos fichiers. 
 
-On retrouve nos variables d'environnments puisque ce sont des paramètres qui serviront dans nos fichiers de configuration "mettre image1" Donc nous pouvons ci-dessus, les variables d'environnments définis à la création du conteneur que l'on récupère dans l'application. 
+On retrouve nos variables d'environnments puisque ce sont des paramètres qui serviront dans nos fichiers de configuration 
+
+"mettre image1" 
+
+Donc nous pouvons ci-dessus, les variables d'environnments définis à la création du conteneur que l'on récupère dans l'application.
+
 Ensuite on définit le paramètre port qui permet la redirection du port 80 pour notre conteneur vers le port 8080 de la machine hôte. On déclare des dépendances, qui vont nous permettre de dire que si les conteneurs indiqués ne sont pas correctents démarrés, on arrête le build du conteneur en question. 
+
 On a un paramètre build qui nous permet d'indiquer le chemin vers le docker file. Maintenant parlons du docker file : il permet de créer l'image du conteneur devops-main. On part d'un conteneur NGINX, on copie les fichiers dont on aura besoin plus tard (fichier de configuration et fichier entry-point). 
 On exécute ensuite une série de commandes permettant la préparation et l'installation de nos dépendances logiciels. Après nous allons colner le projet Github à la racine du serveur web. 
 
@@ -72,11 +76,15 @@ Enfin nous éxécutons l'entry-point via la directive unique "CMD" ce qui nous r
 
 Une fois qu'on dispose de tout ca on exécute : docker-compose build afin de construire l'architecture et les images selon la description fournit dans le fichier : docker-compose.yml
 
-Enfin pour instancier les conteneurs, on exécute docker-compose up -d Les conteneurs seront détachés en tâche de fond : "image 2 "
+Enfin pour instancier les conteneurs, on exécute docker-compose up -d Les conteneurs seront détachés en tâche de fond : 
+
+"image 2 "
 
 Ici nous pouvons le résultat de build : différentes images ont été téléchargé ou créé comme par exemple : postgres, sonarqube ou nginx que l'on retrouve dans docker-compose.yml et docker file ou encore devops_devops-main qui est l'image résultant du docker file et correspodant à notre application principale.
 
-Le dernier fichier créé que l'on copie comme mentionné ds le docker file qui est "app.conf" "image3"
+Le dernier fichier créé que l'on copie comme mentionné ds le docker file qui est "app.conf" 
+
+"image3"
 
 Il s'agit de configuration nginx, permettant d'accéder à l'application python/flask, depuis le port 80 du conteneur. Il est intéressant de noter que l'on peut utiliser comme directive "server_name" le nom du conteneur tel que définit dans le docker-compose.yml, à la place de son adresse IP. Qui elle n'est pas connu à l'avance et qui change d'un build à un autre et d'une machine à une autre.
 
