@@ -97,7 +97,7 @@ We reuse this same advantage in the application by using the name of the bdd con
 
 
 ## Some testing <a name="test"></a>
-UNDER CONSTRUCTION
+The tests has been made to check that the connection has been openned properly. It uses unittest ( to be installed if needed ) and should return some simple values by executing it. Errors on the execution can be caused because sqlachelmy hasn't been installed.
 
 ## The Licence <a name="licence"></a>
 Licensed GNU General Public License v3.0. [View license](https://github.com/taurus-silver-17/Devops-ing4/blob/master/LICENSE)
