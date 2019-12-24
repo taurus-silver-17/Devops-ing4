@@ -23,6 +23,8 @@ By Arnaud Jullemier-Millasseau and Lilian Delaplace TD03 (inter)
         1. [Team](#team)
         2. [Task](#task)
 4. [How to launch it](#nasa)
+5. [Issues](#issues)
+
 
 ## This is the introduction <a name="introduction"></a>
 The purpose of this directory is to respond to an homework of Devops. The goal is to put into practice the right methodology for a Devops project.
