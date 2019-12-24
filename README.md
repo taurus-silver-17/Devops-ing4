@@ -109,7 +109,9 @@ To create the badges like these :
 We used [shield.io](https://shields.io/)
 
 ## Who did what ? <a name="who"></a>
-In this section you will find the consitution of our Team and the tasks
+In this section you will find the consitution of our Team and the tasks. We used those tools for our project
+![alt text](https://github.com/taurus-silver-17/Devops-ing4/blob/master/static/img/time.png)
+
 ## Team  <a name="team"></a>
 We are a team of two :
 - [Lilian Delaplace (Techorem)](https://github.com/techorem)
